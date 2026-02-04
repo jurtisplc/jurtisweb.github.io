@@ -3,26 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Porfolio</title>
+    <title>Portfolio Jurtisplc</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
-      <button>
-        <a href="index.html">Trang chủ</a>
-      </button>
-      <button>
-        <a href="about.html">Giới thiệu</a>
-      </button>
-      <button>
-        <a href="projects.html">Dự án</a>
-      </button>
-      <button>
-        <a href="contact.html">Liên hệ</a>
-      </button>
-      <button>
-        <a href="hobby.html">Sở thích</a>
-      </button>
-    </nav>
+    <header>
+      <nav>
+        <div class="logo">Jurtis's Portfolio</div>
+        <ul class="nav-links">
+          <li>
+            <a href="index.html" class="active"> Trang chủ</a>
+          </li>
+          <li><a href="about.html">Thông tin cá nhân</a></li>
+          <li><a href="projects.html">Dự án</a></li>
+          <li><a href="experience.html">Kinh nghiệm</a></li>
+          <li><a href="interests.html">Sở thích</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Xin chào, mình là <span class="highlight">Jurtisplc</span></h1>
+          <p>
+            Sinh viên năm 2 trường Đại học Công Nghệ thông tin - Đại học QG
+            TP.HCM | Business Analyst | Web Developer
+          </p>
+          <a href="projects.html" class="btn">Xem Dự Án Của Tui</a>
+        </div>
+        <div class="hero-image">
+          <img src="img/đẹp.jpg" alt="Ảnh đại diện" />
+        </div>
+      </section>
+
+      <section class="about-me">
+        <h2>Giới thiệu</h2>
+        <p>
+          Viết một đoạn ngắn giới thiệu về bản thân, kỹ năng và mục tiêu nghề
+          nghiệp của bri ở đây.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Designed by Bri.</p>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>

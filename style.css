@@ -1,0 +1,132 @@
+/* Reset mặc định */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Thanh menu */
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+/* 1. Thiết lập cho thẻ a */
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative; /* Quan trọng: để cái gạch chân nó bám theo chữ */
+  padding-bottom: 5px; /* Tạo khoảng cách giữa chữ và gạch chân */
+}
+
+/* 2. Tạo cái gạch chân ẩn (trạng thái ban đầu) */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0; /* Ban đầu chiều dài bằng 0 (ẩn) */
+  height: 3px; /* Độ dày của gạch chân */
+  bottom: 0;
+  left: 0;
+  background-color: #f39c12; /* Màu cam chủ đạo */
+  transition: width 0.3s ease; /* Hiệu ứng trượt mượt mà trong 0.3s */
+}
+
+/* 3. Khi rê chuột (Hover) hoặc đang ở trang đó (Active) thì hiện gạch chân */
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%; /* Kéo dài ra 100% chiều rộng của chữ */
+}
+
+/* (Tuỳ chọn) Đổi màu chữ khi hover cho đẹp thêm */
+.nav-links a:hover,
+.nav-links a.active {
+  color: #f39c12;
+}
+/* Nội dung chính */
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  color: #f39c12;
+}
+
+.btn {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background: #555;
+}
+
+.hero-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* Làm tròn ảnh */
+  object-fit: cover;
+  border: 5px solid #f39c12;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #333;
+  color: #fff;
+  margin-top: 2rem;
+}
